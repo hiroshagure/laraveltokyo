@@ -63,3 +63,7 @@ Route::get('thanks/{msg?}', function ($msg='no message.') {
     EOF;
     return $html;
 });
+
+// アクションにルートを割り当てる
+// 第一引数：アドレス、第二引数：コントローラ名@アクション名
+Route::get('buzz', 'BuzzController@index');
